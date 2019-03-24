@@ -19,7 +19,16 @@ class Node {
 	}
 
 	removeChild(node) {
-		
+		if (node === this.left) {
+            this.left = null;
+            node.parent = null;
+        } else
+        if (node === this.right) {
+            this.right = null;
+            node.parent = null;
+        } else {
+            throw "Error";
+        }
 	}
 
 	remove() {
